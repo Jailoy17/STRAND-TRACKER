@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>HOME PAGE</title>
+    <link rel="http//localhost:8080/HOME.html" href="HOME.css">
+        <metal name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+<body>
+    <script type="text/javascript">
+        alert("We would like the respondents to extend their helping hand in participating our research through this given questionnaire.");
+     </script>
+        <div class="video-container">
+            <video src="Video1.mp4.mp4" width="100%" height="60%" autoplay loop muted>
+        </div>
+        <div class="overlay">
+                </video>
+        <div class="navbar">
+<img src="logo.jpg" class="logo">
+    </div>
+    <div class="content">
+            <span><h2>Be</h2></span>
+            <span>One</span>
+            <span>Of</span>
+            <span><h2>Us!</h2></span>
+        </div> <center>
+    <div class="text"><p>SIERRA BULLONES TECHNICAL VOCATIONAL HIGH SCHOOL</p></div>
+    <button class="btn"><a href="APPLICATION.html"><b><span></span>ENROLL NOW!</b></button>
+    </div></center>
+
+ <style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .overlay{
+        position: absolute;
+        height: 10vh;
+        width: 216vh;
+        background-color: #424242;
+        opacity: 0.7;
+    }
+    .navbar{
+        width: 85%;
+        margin: auto;
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+.logo{
+    height: 10%;
+    width: 10%;
+    border-radius: 60%;
+    border: 3px solid #2bffea;
+    }
+
+.content {
+    width: 90%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    height: 30vh;
+    font-family: "poppins", cursive;
+    font-size: 3rem;
+}
+.text {
+    font-size: 2rem;
+    font-family: "poppins", cursive;
+    color: #2bffea;
+    padding: 10vh;
+    height: 20%;
+    text-align: center;
+}
+
+.content > span{
+    animation: glow 2s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px red, 0 0 50px red, 0 0 100px red;
+    }
+    10%, 90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+
+.content > span:nth-child(2){
+    animation-delay: 0.25s;
+}
+.content > span:nth-child(3){
+    animation-delay: 0.50s;
+}
+.content > span:nth-child(4){
+    animation-delay: 1s;
+}
+.content > span:nth-child(6){
+    animation-delay: 1.10s;
+}
+
+  /* button */
+.btn {
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+.btn a{
+    font-family: "poppins", cursive;
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+.btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+ 
+/* glow */
+.btn::before {
+    content: "";
+    background: linear-gradient(
+    45deg,
+    #ff0000, #ff7300, #fffb00, #48ff00,
+    #00ffd5, #002bff, #ff00c8, #ff0000
+ );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 1;
+}
+ @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+ } 
+/* hover */
+ .btn:hover:before {
+    opacity: 1;
+ }
+.btn:active::after {
+    background: transparent;
+ }
+.btn:active {
+    color: #000;
+    font-weight: bold;
+ }
+dt {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #fff;
+}
+.slider-frame {
+    overflow: hidden;
+    height: 700px;
+}
+/*----------SLIDE ANIMATION----------*/
+ @-webkit-keyframe slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left:2400px;}
+    50% {left:2400px;}
+    60% {left:1200px;}
+    70% {left:1200px;}
+    80% {left:0px;}
+    90% {left:0px;}
+    100% {left:0px;}
+}
+.slide-images{
+    height: 3000px;
+    width: 600px;
+    margin: 0 0 0 10px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration:20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternative;
+    -webkit-animation-play-state: running;
+ }
+ </style>
+ </body>
+ </html>                
+

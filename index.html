@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+</head>
+<body>
+     
+    <div class="container">  
+        
+        <video autoplay loop muted class="background-clip">
+            <source src="Video1.mp4.mp4" type="video/mp4">
+        </video>
+    <div class="content">
+        <img src="logo.jpg" class="logo"> 
+       <center><h1>SIERRA BULLONES TECHNICAL VOCATIONAL HIGH SCHOOL</h1>
+        <a href="APPLICATION.html" class="btn">ENROLL NOW!</a>
+    </center>
+    </div>
+    <div class="text">
+        <span><h2>Be</h2></span>
+        <span>One</span>
+        <span>Of</span>
+        <span><h2>Us!</h2></span>
+    </div>
+
+    </div>
+    </div>
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', cursive;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            text-align: left;
+        }
+
+        .content h1{
+            font-size: 40px;
+            color: #2bffea;
+            margin-bottom: 50px;
+            font: bold;
+        }
+.logo{
+    height: 15%;
+    width: 15%;
+    border-radius: 60%;
+    border: 5px solid #2bffea;
+    display: block;    
+    margin: auto;
+}
+
+.text {
+    width: 75%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    height: 95vh;
+    width: 0;
+    font-family: "poppins", cursive;
+    font-size: 4rem;
+}
+
+.text > span{
+    animation: glow 2s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px red, 0 0 50px red, 0 0 100px red;
+    }
+    10%, 90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+
+.text > span:nth-child(2){
+    animation-delay: 0.25s;
+}
+.text > span:nth-child(3){
+    animation-delay: 0.50s;
+}
+.text > span:nth-child(4){
+    animation-delay: 1s;
+}
+.text > span:nth-child(6){
+    animation-delay: 1.10s;
+}
+
+
+          /* button */
+.btn {
+    padding: 20px 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+.btn a{
+    font-family: "poppins", cursive;
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+.btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+ 
+/* glow */
+.btn::before {
+    content: "";
+    background: linear-gradient(
+    45deg,
+    #ff0000, #ff7300, #fffb00, #48ff00,
+    #00ffd5, #002bff, #ff00c8, #ff0000
+ );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 1;
+}
+ @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+ } 
+/* hover */
+ .btn:hover:before {
+    opacity: 1;
+ }
+.btn:active::after {
+    background: transparent;
+ }
+.btn:active {
+    color: #000;
+    font-weight: bold;
+ }
+dt {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #fff;
+}
+.slider-frame {
+    overflow: hidden;
+    height: 700px;
+}
+/*----------SLIDE ANIMATION----------*/
+ @-webkit-keyframe slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left:2400px;}
+    50% {left:2400px;}
+    60% {left:1200px;}
+    70% {left:1200px;}
+    80% {left:0px;}
+    90% {left:0px;}
+    100% {left:0px;}
+}
+.slide-images{
+    height: 3000px;
+    width: 600px;
+    margin: 0 0 0 10px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration:20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternative;
+    -webkit-animation-play-state: running;
+ }
+ .background-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+ }
+
+ @media (min-aspect-ratio:16/9) {
+    .background-clip{
+        width: 100%;
+        height: auto;
+    }
+ }
+
+ @media (max-aspect-ratio:16/9) {
+    .background-clip{
+        width: auto;
+        height: 100%;
+ }
+/*}2006*/
+ }
+    </style>
+
+</body>
+</html>

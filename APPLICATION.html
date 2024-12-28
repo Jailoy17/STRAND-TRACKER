@@ -1,0 +1,292 @@
+<DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">       
+        <title>APPLICATION FORM</title>
+        </head>
+        
+<body>
+    <div class="bg-gradiant">
+    <section class="container">
+    <header>Registration Form</header>
+        <form action="#" class="form">
+        <div class="input-box">
+            <label>FULL NAME</label>
+            <input type="text" placeholder="Enter Full Name" required/>
+            </div>
+            <div class="input-box">
+            <label>LEARNER'S REFERENCE NUMBER</label>
+            <input type="text" placeholder="Enter Learner's Reference Number" required/>
+            </div>
+            
+            <div class="column">
+                <div class="input-box">
+                <label>BIRTH PLACE</label>
+            <input type="text" placeholder="Enter Birth Place" required/>
+            </div>
+                
+                <div class="input-box">
+                <label>BIRTH PLACE</label>
+            <input type="date" placeholder="mm/dd/yy" required/>
+            </div>
+            </div>
+            
+            <div class="gender-box">
+            <h3>GENDER</h3>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input type="radio" id="check-male" name="gender" checked/>
+                        <label for="check=male">Male</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-female" name="gender" checked/>
+                        <label for="check-female">Female</label>
+                    </div>
+                </div>
+            </div>
+            <label>CURRENT ADDRESS</label>
+            <div class="column" required>
+                <div class="select-box">
+                    <select style="width: 620px;" id="slct1">
+                    <option>Enter Municipality Address</option></select>
+                    <br>
+                    <br>
+                    <select style="width: 300px;" id="slct2">
+                    <option>Enter Barangay Address</option></select>   
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="column" required>
+                <div class="select-box">
+                    <select>
+                        <option hidden>Enter Street Address </option>
+                        <option>Purok 1</option>
+                        <option>Purok 2</option>
+                        <option>Purok 3</option>
+                        <option>Purok 4</option>
+                        <option>Purok 5</option>
+                        <option>Purok 6</option>
+                        <option>Purok 7</option>
+                        <option>Purok 8</option>
+                        <option>Purok 9</option>
+                        <option>Purok 10</option>
+                    </select>
+                </div>
+            </div>
+            <br> <br>
+        <label>TRACK PRIORITY</label> 
+    <div class="column" required>
+        <div class="select-box">
+            <select>
+                <option hidden>First Priority Track</option>
+                <OPTION>ACCOUNTING AND BUSINESS MANAGEMENT (ABM)</OPTION>
+                <OPTION>HUMINITY AND SOCIAL SCIENCES (HUMSS)</OPTION>
+                <OPTION>SCIENCE TECHNOLOGY ENGINEERING MATHEMATICS (STEM)</OPTION>
+                <OPTION>TECHNICAL VOCATIONAL LIVELIHOOD (TVL)</OPTION>
+            </select>
+        </div>
+    </div>
+    <div class="column" required>
+        <div class="select-box">
+            <select>
+                <option hidden>Second Priority Track</option>
+                <OPTION>ACCOUNTING AND BUSINESS MANAGEMENT (ABM)</OPTION>
+                <OPTION>HUMINITY AND SOCIAL SCIENCES (HUMSS)</OPTION>
+                <OPTION>SCIENCE TECHNOLOGY ENGINEERING MATHEMATICS (STEM)</OPTION>
+                <OPTION>TECHNICAL VOCATIONAL LIVELIHOOD (ABM)</OPTION>
+            </select>
+        </div>
+    </div>
+    <div class="column" required>
+        <div class="select-box" >
+            <select>
+                <option hidden>Third Priority Track</option>
+                <OPTION>ACCOUNTING AND BUSINESS MANAGEMENT (ABM)</OPTION>
+                <OPTION>HUMINITY AND SOCIAL SCIENCES (HUMSS)</OPTION>
+                <OPTION>SCIENCE TECHNOLOGY ENGINEERING MATHEMATICS (STEM)</OPTION>
+                <OPTION>TECHNICAL VOCATIONAL LIVELIHOOD (TVL)</OPTION>
+            </select>
+        </div>
+    </div>
+    <button><a href="QUESTION FORM V 2.0.html">PROCEED</a></button> 
+                </div>
+            </div>
+        </form>
+    </section>
+   
+    <script>
+        let Municipality = ["SIERRA BULLONES", "PILAR", "CARMEN"];
+        let SIERRA_BULLONES = ["ABACHANAN", "ANIBONGAN", "BUGSOC", "CAHAYAG", "CANLANGIT", "CANTA-UB", "CASILAY", "DANICOP", "DUSITA", "LA UNION", "LATABAN", "MAGSAYSAY", "NAN-OD", "MATIN-AO", "POBLACION", "SALVADOR", "SAN AGUSTIN", "SAN ISIDRO", "SAN JOSE", "SAN JUAN", "SANTA CRUZ", "VILLA GARCIA"];
+        let PILAR = ["AURORA", "BAGACAY", "BAGUMBAYAN", "BAYONG", "BUENASUERTE", "CAGAWASAN","CANSUNGAY", "CATAGDA-AN", "DEL PILAR", "ESTACA", "ILAUD", "INAGHUBAN", "LA SUERTE", "LUMBAY", "LUNDAG", "PAMACSALAN", "POBLACION", "RIZAL", "SAN CARLOS", "SAM ISIDRO", "SAN VICENTE"];
+        let CARMEN = ["ALEGRIA", "BICAO", "BUENAVISTA", "BUENOS AIRES", "CALATRAVA", "EL PROGRESO", "EL SALVADOR", "GUADALUPE", "KATIPUNAN", "LA LIBERTAD", "LA PAZ", "LA SALVACION", "LA VICTORIA", "MATIN-AO", "MONTEHERMOSO", "MONTESUERTE", "MONTESUNTING", "MONTEVIDEO", "NUEVA FUERZA", "NUEVA VIDA ESTE", "NUEVA VIDA NORTE", "NUEVA VIDA SUR", "POBLACION NORTE", "POBLACION SUR", "TAMBO-AN", "VALLEHERMOSO", "VILLAFLOR", "VILLAFUERTE", "VILLARCAYO"];
+
+        let slct1 = document.getElementById("slct1");
+        let slct2 = document.getElementById("slct2");
+
+        Municipality.forEach(function addMunicipality(item) {
+            let option = document.createElement("option");
+            option.text = item;
+            option.value = item;
+            slct1.appendChild(option);
+        });
+
+        slct1.onchange = function () {
+            slct2.innerHTML = "<option></option>";
+            if (this.value == "SIERRA BULLONES") {
+                addToslct2(SIERRA_BULLONES);
+            }
+            if (this.value == "PILAR") {
+                addToslct2(PILAR);
+            }
+            if (this.value == "CARMEN") {
+                addToslct2(CARMEN);
+            }
+        }
+
+        function addToslct2(arr) {
+            arr.forEach(function (item) {
+                let option = document.createElement("option");
+                option.text = item;
+                option.value = item;
+                slct2.appendChild(option);
+            });
+        }
+    </script>
+
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "poppins", sans-serif;
+    }
+    .bg-gradiant{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        background: linear-gradient(45deg, #24A0ED, #E275A4, #BA9341, #00AE8D);
+        background-size: 300% 300%;
+        animation: color 12s ease-in-out infinite;
+    }
+        @keyframes color{
+        0%{
+            background-position: 0 50%;
+        }
+         50%{
+            background-position: 100% 50%;
+        }
+         100%{
+            background-position: 0 50%;
+        }
+    }
+    .container{
+        position: relative;
+        max-width: 700px;
+        width: 100%;
+        background: #fff;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    .container header {
+        font-size: 1.5rem;
+        color: #333;
+        font-weight: 500;
+        text-align: center;
+    }
+    .container .form {
+        margin-top: 30px;
+    } 
+    .form .input-box {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .input-box label{
+        color: #333;
+    }
+    .form :where(.input-box input, .select-box) {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        outline: none;
+        font-size: 1rem;
+        color: #707070;
+        margin-top: 8px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 0 15px;
+    }
+    .form .column{
+        display: flex;
+        column-gap: 15px;
+    }
+    .form .gender-box {
+        margin-top: 20px;
+    }
+    .gender-box h3{
+        color: #333;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-top: 8px;
+    }
+    .form :where(.gender-option, .gender) {
+        display: flex;
+        align-items: center;
+        column-gap: 50px; 
+        flex-wrap: wrap;
+    }
+    .form .gender {
+        column-gap: 5px;
+    }
+    .form :where(.gender input, .gender label) {
+        cursor: pointer;
+    }
+    .addres :where(input, .select-box) {
+        margin-top: 20px;
+    }
+    .select-box select {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        border: none;
+        color: #707070;
+        font-size: 1rem;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 500px) {
+        .form .column{
+            flex-wrap: wrap;
+        }
+        .form :where(.gender-option, .gender) {
+            row-gap: 15px;
+        }
+    }
+    button {
+        color: #333;
+        padding: 8px 22px;
+        border-radius: 6px;
+        background: #fff;
+        transition: all 0.2s ease;
+        margin: 20px 0;
+    }
+    button:active {
+        transform: scale(0.96);
+    }
+    button a{
+        align-items: center;
+        justify-content: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+</style>
+ </body>
+    </html>
